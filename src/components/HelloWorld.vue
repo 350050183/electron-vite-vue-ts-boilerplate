@@ -1,14 +1,25 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { Dayjs } from 'dayjs';
+
 defineProps<{ msg: string }>()
 
 const count = ref(0)
+
+const value = ref<Dayjs>();
+const onPanelChange = (value: Dayjs, mode: string) => {
+  console.log(value, mode);
+};
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
   ddddd
   <AButton>ddddd</AButton>
+  <div :style="{ width: '300px', border: '1px solid #d9d9d9', borderRadius: '4px' }">
+    <a-calendar v-model:value="value" :fullscreen="false" @panelChange="onPanelChange" />
+  </div>
+
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>
