@@ -11,7 +11,15 @@
     "plugin:import/recommended",
     "plugin:import/electron",
     "plugin:import/typescript",
-    "plugin:import/vue"
+    "plugin:vue/base",
+    "plugin:vue/vue3-recommended",
+    "@vue/eslint-config-typescript",
+    "prettier"
   ],
-  "parser": "@typescript-eslint/parser"
+  "plugins": ["@typescript-eslint", "prettier"],
+  //  "parser": "@typescript-eslint/parser",
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser"
+  }
 }
