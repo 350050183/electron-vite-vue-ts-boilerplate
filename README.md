@@ -1,1 +1,1 @@
-A ElectrongJS+ViteJS+VueJS+TypeScript boilerplate
+A ElectronJS+ViteJS+VueJS+TypeScript+AntDesignOfVue boilerplate
